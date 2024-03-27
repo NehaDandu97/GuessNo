@@ -1,0 +1,18 @@
+from random import randint
+number=randint(1,100)
+chances=5
+
+while chances>0:
+    userResponse=int(input("guess the number : "))
+    if userResponse==number:
+        print("u won the game")
+        break
+    elif userResponse>number:
+        chances-=1
+        print("guessed number is greater than actual number")
+    else:
+        chances-=1
+        print("guessed number is less than actual number")
+else:
+    print("u lost")
+    print("no is",number)
